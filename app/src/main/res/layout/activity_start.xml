@@ -6,7 +6,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.StartActivity">
+    tools:context=".ui.StartActivity"
+    android:background="@drawable/bgstart">
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,12 +35,12 @@
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
         android:backgroundTint="@color/purple"
         android:text="GET STARTED"
+        android:layout_marginTop="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
