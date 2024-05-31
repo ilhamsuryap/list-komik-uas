@@ -4,4 +4,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#FF3700B3</color>
     <color name="hitam">#00000F</color>
-</resources>
+        <color name="gelap">#222831</color>
+        <color name="abu_gelap">#393E46</color>
+        <color name="abu_gelap_transparant">#80393E46</color>
+        <color name="biru_cerah">#00ADB5</color>
+        <color name="putih">#EEEEEE</color>
+        <color name="transparent">#00000000</color>
+    </resources>

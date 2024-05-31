@@ -16,3 +16,22 @@ fun generateDataList(): MutableList<dataList> {
     data.add(dataList("MANGA",R.drawable.renkarnasi, "Reincarnations of the Swordmaster"))
     return data
 }
+
+data class kelompok(
+    val gambar: String,
+    val nama:String,
+    val nim:String,
+    val ttl: String,
+    val alamat: String,
+    val prodi : String
+    )
+class ListKelompok {
+    fun dataKelompok():MutableList<kelompok>{
+        val mahasiswa = mutableListOf<kelompok>()
+        mahasiswa.add(kelompok("java","Ilham Suryaputra", "233307103/2D", "Ngawi, 23 Mei 2005", "Ngawi", "Teknologi Informasi"))
+        mahasiswa.add(kelompok("java","Muhammad Miftahul Karim", "233307109/2D", "Tulungagung, 28 Oktober 2004", "Tulungagung", "Teknologi Informasi"))
+        mahasiswa.add(kelompok("java","Umi Latifah", "233307117/2D", "Magetan, 15 Agustus 2005", "Magetan", "Teknologi Informasi"))
+        mahasiswa.add(kelompok("java","Nanik Mugi Rahayu", "233307109/2D", "Tulungagung, 28 Oktober 2004", "Tulungagung", "Teknologi Informasi"))
+        return mahasiswa
+    }
+}
