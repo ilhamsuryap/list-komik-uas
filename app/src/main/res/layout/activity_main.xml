@@ -7,13 +7,64 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+   <LinearLayout
+       android:id="@+id/bottom_nav"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:orientation="horizontal"
+       android:background="@color/purple"
+       android:paddingHorizontal="25dp">
+
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/btnHome"
+           android:layout_width="0dp"
+           android:layout_height="60dp"
+           android:layout_weight="1"
+           android:backgroundTint="@color/purple"
+           android:drawableTop="@drawable/home"
+
+           android:paddingTop="15dp"
+           app:iconSize="18dp" />
+
+ <com.google.android.material.button.MaterialButton
+     android:id="@+id/btnDashboard"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="60dp"
+           android:paddingTop="15dp"
+           android:backgroundTint="@color/purple"
+           android:drawableTop="@drawable/dashboard"
+           app:iconSize="18dp" />
+
+ <com.google.android.material.button.MaterialButton
+     android:id="@+id/btnAbout"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="60dp"
+           android:paddingTop="15dp"
+           android:backgroundTint="@color/purple"
+           android:drawableTop="@drawable/about"
+           app:iconSize="18dp" />
+
+   </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/hitam">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

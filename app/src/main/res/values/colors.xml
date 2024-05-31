@@ -3,4 +3,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#FF3700B3</color>
+    <color name="hitam">#00000F</color>
 </resources>
