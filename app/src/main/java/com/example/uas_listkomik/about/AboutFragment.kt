@@ -5,27 +5,29 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.uas_listkomik.R
+import com.example.uas_listkomik.databinding.FragmentAboutBinding
+import com.example.uas_listkomik.komik.AdapterKelompok
+import com.example.uas_listkomik.komik.kelompok
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [AboutFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class AboutFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private var param1: String? = null
     private var param2: String? = null
+    private var _binding: FragmentAboutBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
+            val ARG_PARAM1 = null
             param1 = it.getString(ARG_PARAM1)
+            val ARG_PARAM2 = null
             param2 = it.getString(ARG_PARAM2)
         }
     }
@@ -34,24 +36,77 @@ class AboutFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_about, container, false)
+        _binding = FragmentAboutBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.rvKelompok.layoutManager = GridLayoutManager(context, 2)
+
+        // Contoh data mahasiswa
+        val list = listOf(
+            kelompok("java","Ilham Suryaputra", "233307103/2D", "Ngawi, 23 Mei 2005", "Ngawi", "Teknologi Informasi"),
+            kelompok("java","Muhammad Miftahul Karim", "233307109/2D", "Tulungagung, 28 Oktober 2004", "Tulungagung", "Teknologi Informasi"),
+            kelompok("java","Umi Latifah", "233307117/2D", "Magetan, 15 Agustus 2005", "Magetan", "Teknologi Informasi"),
+            kelompok("java","Nanik Mugi Rahayu", "233307109/2D", "Tulungagung, 28 Oktober 2004", "Tulungagung", "Teknologi Informasi")
+        )
+
+        val adapter = AdapterKelompok(list, requireContext(), object : AdapterKelompok.OnItemClickListener {
+            override fun onItemClick(item: kelompok) {
+                showDetailData(item)
+            }
+        })
+        binding.rvKelompok.adapter = adapter
+    }
+
+    private fun showDetailData(item: kelompok) {
+        val popUpView = LayoutInflater.from(context).inflate(R.layout.pop_up, null)
+        val detailGambar: ImageView = popUpView.findViewById(R.id.ivMHS)
+        val detailNama: TextView = popUpView.findViewById(R.id.tvNamaMHS)
+        val detailNim: TextView = popUpView.findViewById(R.id.tvNim)
+        val detailTTL: TextView = popUpView.findViewById(R.id.tvTTLMHS)
+        val detailAlamat: TextView = popUpView.findViewById(R.id.tvAlamatMHS)
+        val detailProdi: TextView = popUpView.findViewById(R.id.tvNoHPMHS)
+        val btnTutup: Button = popUpView.findViewById(R.id.btnTutup)
+
+        val resourceId = resources.getIdentifier(item.gambar, "drawable", context?.packageName)
+        if (resourceId != 0) {
+            detailGambar.setImageResource(resourceId)
+        } else {
+            detailGambar.setImageResource(R.drawable.logo) // Pastikan Anda memiliki gambar default
+        }
+
+        detailNama.text = item.nama
+        detailNim.text = item.nim
+        detailTTL.text = item.ttl
+        detailAlamat.text = item.alamat
+        detailProdi.text = item.prodi
+
+        val dialog = AlertDialog.Builder(requireContext())
+            .setView(popUpView)
+            .create()
+
+        btnTutup.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AboutFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             AboutFragment().apply {
                 arguments = Bundle().apply {
+                    val ARG_PARAM1 = null
+                    val ARG_PARAM2 = null
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
                 }
