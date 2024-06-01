@@ -13,6 +13,9 @@
         android:theme="@style/Theme.UAS_ListKomik"
         tools:targetApi="31">
         <activity
+            android:name=".komik.TrendingAdapter"
+            android:exported="false" />
+        <activity
             android:name=".komik.KomikAdapter"
             android:exported="false" />
         <activity

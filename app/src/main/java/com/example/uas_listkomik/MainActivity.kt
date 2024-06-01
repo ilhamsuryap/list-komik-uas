@@ -20,9 +20,11 @@ import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var homeFragment : HomeFragment
-    private lateinit var dashboardFragment : DashboardFragment
-    private lateinit var aboutFragment : AboutFragment
+
+    private lateinit var homeFragment: HomeFragment
+    private lateinit var dashboardFragment: DashboardFragment
+    private lateinit var aboutFragment: AboutFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -36,23 +38,17 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnHome.setOnClickListener {
             loadFragment(homeFragment)
-            return@setOnClickListener
-
-
         }
         binding.btnDashboard.setOnClickListener {
             loadFragment(dashboardFragment)
-            return@setOnClickListener
         }
         binding.btnAbout.setOnClickListener {
             loadFragment(aboutFragment)
-            return@setOnClickListener
-
         }
 
     }
     private fun loadFragment(fragment: Fragment){
-        val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+        val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.main, fragment)
         transaction.commit()
     }
