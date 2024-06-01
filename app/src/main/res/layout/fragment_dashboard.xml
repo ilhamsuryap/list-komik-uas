@@ -9,6 +9,55 @@
 
 
 
+    <HorizontalScrollView
+        android:id="@+id/layoutCategory"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:layout_marginEnd="2dp"
+                android:textSize="13sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/manhwa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manhwa"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/manga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manga"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/guideline_bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/manhwa"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
 
 
     <androidx.constraintlayout.widget.Guideline
