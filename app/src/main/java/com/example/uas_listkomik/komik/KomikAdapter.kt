@@ -4,17 +4,23 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.   view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+
 import android.widget.ImageView
 import android.widget.TextView
+
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uas_listkomik.R
 import com.example.uas_listkomik.databinding.LayoutDataKomikBinding
 
 class KomikAdapter (private var dataKomik: List<dataList>):     // 1 ( buat data class dataList )
-        RecyclerView.Adapter<KomikAdapter.KomikViewHolder>(){    //    (buat ViewHolder : KomikViewHolder))
+    RecyclerView.Adapter<KomikAdapter.KomikViewHolder>(){    //    (buat ViewHolder : KomikViewHolder))
 
- // 2 membuat data class di data.kt
-
+    // 2 membuat data class di data.kt
     class KomikViewHolder(val binding: LayoutDataKomikBinding) :RecyclerView.ViewHolder(binding.root)  // 3
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KomikViewHolder {        // CTRL + o = pilih 3 yaitu onCreate, getItemCount, onBind

@@ -2,18 +2,22 @@ package com.example.uas_listkomik.komik
 
 import com.example.uas_listkomik.R
 
-data class dataList(var kategori: String, var gambar : Int, val nama : String)
+data class dataList(val kategori: CharCategory, var gambar : Int, val nama : String)
+enum class CharCategory {
+    MANHWA,
+    MANGA
+}
 fun generateDataList(): MutableList<dataList> {
     val data = mutableListOf<dataList>()
-    data.add(dataList("MAHNWA",R.drawable.lookism, "Lookism"))
-    data.add(dataList("MAHNWA",R.drawable.htf, "How To Fight"))
-    data.add(dataList("MAHNWA",R.drawable.managerkim, "Manager Kim"))
-    data.add(dataList("MAHNWA",R.drawable.sololeveling, "Solo Leveling"))
-    data.add(dataList("MANGA",R.drawable.holy, "Holy Emperor's Grandsons is a"))
-    data.add(dataList("MANGA",R.drawable.over, "Otherworldly Sword King's Survival Record"))
-    data.add(dataList("MANGA",R.drawable.renkarnasi, "Reincarnations of the Swordmaster"))
-    data.add(dataList("MANGA",R.drawable.renkarnasi, "Reincarnations of the Swordmaster"))
-    data.add(dataList("MANGA",R.drawable.renkarnasi, "Reincarnations of the Swordmaster"))
+    data.add(dataList(CharCategory.MANHWA,R.drawable.lookism, "Lookism"))
+    data.add(dataList(CharCategory.MANHWA,R.drawable.htf, "How To Fight"))
+    data.add(dataList(CharCategory.MANHWA,R.drawable.managerkim, "Manager Kim"))
+    data.add(dataList(CharCategory.MANHWA,R.drawable.sololeveling, "Solo Leveling"))
+    data.add(dataList(CharCategory.MANGA,R.drawable.holy, "Holy Emperor's"))
+    data.add(dataList(CharCategory.MANGA,R.drawable.over, "Otherworldly Sword"))
+    data.add(dataList(CharCategory.MANGA,R.drawable.renkarnasi, "Reincarnations"))
+    data.add(dataList(CharCategory.MANGA,R.drawable.renkarnasi, "Reincarnations"))
+    data.add(dataList(CharCategory.MANGA,R.drawable.renkarnasi, "Reincarnations"))
     return data
 }
 
