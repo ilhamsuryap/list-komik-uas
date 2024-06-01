@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:backgroundTint="@color/transparent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="24dp"
+        android:background="@drawable/list_data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardIvMHS"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="@id/Card"
+            app:layout_constraintStart_toStartOf="@+id/Card"
+            app:layout_constraintTop_toTopOf="@+id/Card">
+
+            <ImageView
+                android:id="@+id/ivMHS"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo"
+                tools:ignore="ContentDescription,MissingConstraints" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/desc"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/Card"
+            app:layout_constraintStart_toStartOf="@+id/Card"
+            app:layout_constraintTop_toBottomOf="@+id/cardIvMHS">
+
+            <LinearLayout
+                android:id="@+id/isi_desc"
+                android:orientation="vertical"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/namaMhs"
+                    android:layout_width="300dp"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:textColor="@color/gelap"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Nama"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvNamaMHS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gelap"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Muhammad Miftahul Karim" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Nim_Kelas"
+                    android:orientation="horizontal"
+                    android:layout_width="300dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:textColor="@color/gelap"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Nim/Kelas"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvNim"
+                        android:layout_width="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gelap"
+                        android:textSize="16sp"
+                        tools:text="123456789" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/TTL"
+                    android:orientation="horizontal"
+                    android:layout_width="300dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:textColor="@color/gelap"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="TTL"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvTTLMHS"
+                        android:layout_width="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gelap"
+                        android:textSize="16sp"
+                        tools:text="123456789" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Alamat"
+                    android:orientation="horizontal"
+                    android:layout_width="300dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:textColor="@color/gelap"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Alamat"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvAlamatMHS"
+                        android:layout_width="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gelap"
+                        android:textSize="16sp"
+                        tools:text="123456789" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/No_HP"
+                    android:orientation="horizontal"
+                    android:layout_width="300dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:textColor="@color/gelap"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Prodi"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvNoHPMHS"
+                        android:layout_width="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gelap"
+                        android:textSize="16sp"
+                        tools:text="123456789" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/footer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/desc"
+                app:layout_constraintTop_toBottomOf="@+id/isi_desc">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTutup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/biru_cerah"
+                    android:padding="0dp"
+                    android:text="@string/tutup"
+                    android:textColor="@color/putih"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    app:cornerRadius="5dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
