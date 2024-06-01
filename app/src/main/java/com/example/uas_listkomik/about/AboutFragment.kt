@@ -47,10 +47,10 @@ class AboutFragment : Fragment() {
 
         // Contoh data mahasiswa
         val list = listOf(
-            kelompok("java","Ilham Suryaputra", "233307103/2D", "Ngawi, 23 Mei 2005", "Ngawi", "Teknologi Informasi"),
-            kelompok("java","Muhammad Miftahul Karim", "233307109/2D", "Tulungagung, 28 Oktober 2004", "Tulungagung", "Teknologi Informasi"),
-            kelompok("java","Umi Latifah", "233307117/2D", "Magetan, 15 Agustus 2005", "Magetan", "Teknologi Informasi"),
-            kelompok("java","Nanik Mugi Rahayu", "233307109/2D", "Tulungagung, 28 Oktober 2004", "Tulungagung", "Teknologi Informasi")
+            kelompok("ilham","Ilham Suryaputra", "233307103/2D", "Ngawi, 23 Mei 2005", "Ngawi", "Teknologi Informasi"),
+            kelompok("karim","Muhammad Miftahul Karim", "233307109/2D", "Tulungagung, 28 Oktober 2004", "Tulungagung", "Teknologi Informasi"),
+            kelompok("umi","Umi Latifah", "233307117/2D", "Magetan, 15 Agustus 2005", "Magetan", "Teknologi Informasi"),
+            kelompok("nanik","Nanik Mugi Rahayu", "2304307005", "Ketapang, 18 Mei 2004", "Ketapang", "Teknologi Informasi")
         )
 
         val adapter = AdapterKelompok(list, requireContext(), object : AdapterKelompok.OnItemClickListener {
