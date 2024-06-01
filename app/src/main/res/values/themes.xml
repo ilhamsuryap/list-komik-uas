@@ -2,7 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.UAS_ListKomik" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">@color/purple</item>
+<!--         <item name="colorPrimary">@color/purple</item>-->
+        <item name="android:windowTranslucentStatus">true</item>
     </style>
 
     <style name="Theme.UAS_ListKomik" parent="Base.Theme.UAS_ListKomik" />

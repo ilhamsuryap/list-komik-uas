@@ -11,7 +11,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/hitam"
+        android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +42,7 @@
             android:layout_height="60dp"
             android:layout_weight="0.5"
             android:backgroundTint="@color/purple"
-            android:drawableTop="@drawable/home"
+            android:drawableTop="@drawable/homes"
 
             android:paddingTop="15dp"
             app:iconSize="18dp" />
@@ -54,7 +54,7 @@
             android:layout_height="60dp"
             android:paddingTop="15dp"
             android:backgroundTint="@color/purple"
-            android:drawableTop="@drawable/dashboard"
+            android:drawableTop="@drawable/explore"
             app:iconSize="18dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -64,7 +64,7 @@
             android:layout_height="60dp"
             android:paddingTop="15dp"
             android:backgroundTint="@color/purple"
-            android:drawableTop="@drawable/about"
+            android:drawableTop="@drawable/info"
             app:iconSize="18dp" />
 
     </LinearLayout>

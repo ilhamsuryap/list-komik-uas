@@ -27,4 +27,22 @@ private const val ARG_PARAM2 = "param2"
  */
 class DashboardFragment : Fragment() {
 
+
+//    binding.manhwa.setOnClickListener {
+//        filterList(CharCategory.MANHWA) // Panggil filterList dengan kategori MANHWA
+//    }
+//    binding.manga.setOnClickListener {
+//        filterList(CharCategory.MANGA) // Panggil filterList dengan kategori MANGA
+//    }
+
+//    private fun filterList(category: CharCategory) {
+//        val data = generateDataList()
+//        val filteredList = data.filter {
+//            it.kategori == category
+//        }
+//        binding.rvDataList.adapter = KomikAdapter(filteredList)
+//        if (filteredList.isEmpty()) {
+//            Toast.makeText(requireContext(), "Data tidak ditemukan", Toast.LENGTH_SHORT).show()
+//        }
+//    }
 }
