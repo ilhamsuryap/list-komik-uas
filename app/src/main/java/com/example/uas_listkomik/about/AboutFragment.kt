@@ -100,6 +100,7 @@ class AboutFragment : Fragment() {
         _binding = null
     }
 
+
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =

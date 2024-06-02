@@ -70,30 +70,30 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/wa"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:layout_marginTop="36dp"
             android:layout_marginEnd="40dp"
             android:src="@drawable/wa"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/ig"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/ig"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:layout_marginTop="36dp"
             android:layout_marginEnd="40dp"
             android:src="@drawable/ig"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintEnd_toStartOf="@+id/email"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/email"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:layout_marginTop="36dp"
