@@ -32,31 +32,31 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupRecyclerView()
+//        setupRecyclerView()
 
-        binding.manhwa.setOnClickListener {
-            filterList(CharCategory.MANHWA)
-            // Ubah warna latar belakang tombol manhwa menjadi ungu
-            binding.manhwa.backgroundTintList = resources.getColorStateList(R.color.purple)
-            // Ubah warna teks tombol manhwa menjadi putih
-            binding.manhwa.setTextColor(resources.getColor(R.color.white))
-            // Ubah warna latar belakang tombol manga menjadi putih
-            binding.manga.backgroundTintList = resources.getColorStateList(R.color.white)
-            // Ubah warna teks tombol manga menjadi ungu
-            binding.manga.setTextColor(resources.getColor(R.color.purple))
-        }
-
-        binding.manga.setOnClickListener {
-            filterList(CharCategory.MANGA)
-            // Ubah warna latar belakang tombol manga menjadi ungu
-            binding.manga.backgroundTintList = resources.getColorStateList(R.color.purple)
-            // Ubah warna teks tombol manga menjadi putih
-            binding.manga.setTextColor(resources.getColor(R.color.white))
-            // Ubah warna latar belakang tombol manhwa menjadi putih
-            binding.manhwa.backgroundTintList = resources.getColorStateList(R.color.white)
-            // Ubah warna teks tombol manhwa menjadi ungu
-            binding.manhwa.setTextColor(resources.getColor(R.color.purple))
-        }
+//        binding.manhwa.setOnClickListener {
+//            filterList(CharCategory.MANHWA)
+//            // Ubah warna latar belakang tombol manhwa menjadi ungu
+//            binding.manhwa.backgroundTintList = resources.getColorStateList(R.color.purple)
+//            // Ubah warna teks tombol manhwa menjadi putih
+//            binding.manhwa.setTextColor(resources.getColor(R.color.white))
+//            // Ubah warna latar belakang tombol manga menjadi putih
+//            binding.manga.backgroundTintList = resources.getColorStateList(R.color.white)
+//            // Ubah warna teks tombol manga menjadi ungu
+//            binding.manga.setTextColor(resources.getColor(R.color.purple))
+//        }
+//
+//        binding.manga.setOnClickListener {
+//            filterList(CharCategory.MANGA)
+//            // Ubah warna latar belakang tombol manga menjadi ungu
+//            binding.manga.backgroundTintList = resources.getColorStateList(R.color.purple)
+//            // Ubah warna teks tombol manga menjadi putih
+//            binding.manga.setTextColor(resources.getColor(R.color.white))
+//            // Ubah warna latar belakang tombol manhwa menjadi putih
+//            binding.manhwa.backgroundTintList = resources.getColorStateList(R.color.white)
+//            // Ubah warna teks tombol manhwa menjadi ungu
+//            binding.manhwa.setTextColor(resources.getColor(R.color.purple))
+//        }
 
 
         binding.rvDataList.layoutManager = GridLayoutManager(context, 3)
@@ -69,23 +69,23 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
-    private fun setupRecyclerView() {
-        val context = activity ?: return
-        binding.rvDataList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        val data = generateDataList()
-        binding.rvDataList.adapter = KomikAdapter(data)
-    }
+//    private fun setupRecyclerView() {
+//        val context = activity ?: return
+//        binding.rvDataList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+//        val data = generateDataList()
+//        binding.rvDataList.adapter = KomikAdapter(data)
+//    }
 
-    private fun filterList(category: CharCategory) {
-        val data = generateDataList()
-        val filteredList = data.filter {
-            it.kategori == category
-        }
-        binding.rvDataList.adapter = KomikAdapter(filteredList)
-        if (filteredList.isEmpty()) {
-            Toast.makeText(requireContext(), "Data tidak ditemukan", Toast.LENGTH_SHORT).show()
-        }
-    }
+//    private fun filterList(category: CharCategory) {
+//        val data = generateDataList()
+//        val filteredList = data.filter {
+//            it.kategori == category
+//        }
+//        binding.rvDataList.adapter = KomikAdapter(filteredList)
+//        if (filteredList.isEmpty()) {
+//            Toast.makeText(requireContext(), "Data tidak ditemukan", Toast.LENGTH_SHORT).show()
+//        }
+//    }
 
 
 
