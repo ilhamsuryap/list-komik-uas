@@ -42,8 +42,15 @@ class KomikAdapter (private var dataKomik: List<dataList>):     // 1 ( buat data
         holder.binding.tvRating.text = data.rating
     }
 
+        @SuppressLint("NotifyDataSetChanged")
+        fun setFilteredList(filterdata: List<dataList>) {
+            this.dataKomik = filterdata
+            notifyDataSetChanged()
+        }
+    }
 
-}
+
+
 
 class AdapterKelompok(
     private val dataKelompok: List<kelompok>,
