@@ -65,10 +65,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="10dp"
-                    android:backgroundTint="@color/purple"
+                    android:backgroundTint="@color/white"
                     android:padding="2dp"
                     android:text="Manhwa"
-                    android:textColor="@color/white"
+                    android:textColor="@color/purple"
                     android:textSize="12sp" />
 
                 <com.google.android.material.button.MaterialButton
@@ -77,16 +77,18 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="110dp"
                     android:layout_marginEnd="20dp"
-                    android:backgroundTint="@color/purple"
+                    android:backgroundTint="@color/white"
                     android:padding="2dp"
                     android:text="Manga"
-                    android:textColor="@color/white"
+                    android:textColor="@color/purple"
                     android:textSize="12sp" />
+
             </androidx.cardview.widget.CardView>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_dataList"
                 android:layout_width="0dp"
+                android:layout_marginTop="5dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"

@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.uas_listkomik.R
 import com.example.uas_listkomik.databinding.FragmentDashboardBinding
 import com.example.uas_listkomik.databinding.FragmentHomeBinding
 import com.example.uas_listkomik.komik.KomikAdapter
@@ -34,11 +35,29 @@ class HomeFragment : Fragment() {
         setupRecyclerView()
 
         binding.manhwa.setOnClickListener {
-            filterList(CharCategory.MANHWA) // Panggil filterList dengan kategori MANHWA
+            filterList(CharCategory.MANHWA)
+            // Ubah warna latar belakang tombol manhwa menjadi ungu
+            binding.manhwa.backgroundTintList = resources.getColorStateList(R.color.purple)
+            // Ubah warna teks tombol manhwa menjadi putih
+            binding.manhwa.setTextColor(resources.getColor(R.color.white))
+            // Ubah warna latar belakang tombol manga menjadi putih
+            binding.manga.backgroundTintList = resources.getColorStateList(R.color.white)
+            // Ubah warna teks tombol manga menjadi ungu
+            binding.manga.setTextColor(resources.getColor(R.color.purple))
         }
+
         binding.manga.setOnClickListener {
-            filterList(CharCategory.MANGA) // Panggil filterList dengan kategori MANGA
+            filterList(CharCategory.MANGA)
+            // Ubah warna latar belakang tombol manga menjadi ungu
+            binding.manga.backgroundTintList = resources.getColorStateList(R.color.purple)
+            // Ubah warna teks tombol manga menjadi putih
+            binding.manga.setTextColor(resources.getColor(R.color.white))
+            // Ubah warna latar belakang tombol manhwa menjadi putih
+            binding.manhwa.backgroundTintList = resources.getColorStateList(R.color.white)
+            // Ubah warna teks tombol manhwa menjadi ungu
+            binding.manhwa.setTextColor(resources.getColor(R.color.purple))
         }
+
 
         binding.rvDataList.layoutManager = GridLayoutManager(context, 3)
         val data = generateDataList()
