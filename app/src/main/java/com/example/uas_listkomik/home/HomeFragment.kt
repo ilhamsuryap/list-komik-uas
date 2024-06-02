@@ -31,9 +31,16 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setupRecyclerView()
 
-        binding.rvDataList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.manhwa.setOnClickListener {
+            filterList(CharCategory.MANHWA) // Panggil filterList dengan kategori MANHWA
+        }
+        binding.manga.setOnClickListener {
+            filterList(CharCategory.MANGA) // Panggil filterList dengan kategori MANGA
+        }
 
+        binding.rvDataList.layoutManager = GridLayoutManager(context, 3)
         val data = generateDataList()
         binding.rvDataList.adapter = KomikAdapter(data)
     }
@@ -43,6 +50,23 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
+    private fun setupRecyclerView() {
+        val context = activity ?: return
+        binding.rvDataList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        val data = generateDataList()
+        binding.rvDataList.adapter = KomikAdapter(data)
+    }
+
+    private fun filterList(category: CharCategory) {
+        val data = generateDataList()
+        val filteredList = data.filter {
+            it.kategori == category
+        }
+        binding.rvDataList.adapter = KomikAdapter(filteredList)
+        if (filteredList.isEmpty()) {
+            Toast.makeText(requireContext(), "Data tidak ditemukan", Toast.LENGTH_SHORT).show()
+        }
+    }
 
 
 

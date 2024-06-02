@@ -7,16 +7,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="5dp"
-        android:layout_margin="3dp"
-        android:layout_marginStart="5dp"
+        android:layout_margin="5dp"
         tools:context=".komik.KomikAdapter">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/Layout"
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            android:background="@color/purple"
+            android:background="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -30,17 +29,19 @@
 
                 <ImageView
                     android:id="@+id/iv_gambarKomik"
-                    android:layout_width="140dp"
-                    android:layout_height="160dp"
+                    android:layout_width="120dp"
+                    android:layout_height="140dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/defaultgambar"
                     tools:ignore="ContentDescription,MissingConstraints" />
 
                 <androidx.cardview.widget.CardView
+                    android:layout_marginEnd="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="15dp"
                     android:layout_gravity="top|end">
                 <ImageView
+                    android:id="@+id/iv_asalKomik"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
@@ -55,7 +56,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="6dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iv_cardKomik">
 
@@ -63,12 +64,11 @@
                     android:id="@+id/tv_namaKomik"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-black"
+                    android:fontFamily="sans-serif-medium"
                     android:maxLines="2"
                     android:text="@string/nama_komik"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
+                    android:textColor="@color/purple"
+                    android:textSize="11sp"
                     android:textStyle="bold" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -95,9 +95,9 @@
                     android:id="@+id/tv_rating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
-                    android:textSize="12dp"
-                    android:textColor="@color/white"
+                    android:layout_marginStart="20dp"
+                    android:textSize="10dp"
+                    android:textColor="@color/purple"
                     android:text="10.0"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

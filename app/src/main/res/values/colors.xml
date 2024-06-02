@@ -3,8 +3,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#FF3700B3</color>
-    <color name="hitam">#00000F</color>
-        <color name="gelap">#222831</color>
+    <color name="hitam">#1F1F1F </color>
+    <color name="hitamm">#303030 </color>
+
+    <color name="gelap">#222831</color>
         <color name="abu_gelap">#393E46</color>
         <color name="abu_gelap_transparant">#80393E46</color>
         <color name="biru_cerah">#00ADB5</color>
