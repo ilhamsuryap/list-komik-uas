@@ -35,6 +35,9 @@ class KomikAdapter (private var dataKomik: List<dataList>):     // 1 ( buat data
         val data = dataKomik[position]
         holder.binding.ivGambarKomik.setImageResource(data.gambar)
         holder.binding.tvNamaKomik.text = data.nama
+        holder.binding.ivAsalKomik.setImageResource(data.asal)
+        holder.binding.ivStar.setImageResource(data.star)
+        holder.binding.tvRating.text = data.rating
     }
 
 

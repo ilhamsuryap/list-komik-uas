@@ -2,22 +2,30 @@ package com.example.uas_listkomik.komik
 
 import com.example.uas_listkomik.R
 
-data class dataList(val kategori: CharCategory, var gambar : Int, val nama : String)
+data class dataList(val kategori: CharCategory,
+                    val gambar : Int,
+                    val nama : String,
+                    val asal : Int,
+                    val star : Int,
+                    val rating : String)
 enum class CharCategory {
     MANHWA,
     MANGA
 }
 fun generateDataList(): MutableList<dataList> {
     val data = mutableListOf<dataList>()
-    data.add(dataList(CharCategory.MANHWA,R.drawable.lookism, "Lookism"))
-    data.add(dataList(CharCategory.MANHWA,R.drawable.htf, "How To Fight"))
-    data.add(dataList(CharCategory.MANHWA,R.drawable.managerkim, "Manager Kim"))
-    data.add(dataList(CharCategory.MANHWA,R.drawable.sololeveling, "Solo Leveling"))
-    data.add(dataList(CharCategory.MANGA,R.drawable.holy, "Holy Emperor's"))
-    data.add(dataList(CharCategory.MANGA,R.drawable.over, "Otherworldly Sword"))
-    data.add(dataList(CharCategory.MANGA,R.drawable.renkarnasi, "Reincarnations"))
-    data.add(dataList(CharCategory.MANGA,R.drawable.renkarnasi, "Reincarnations"))
-    data.add(dataList(CharCategory.MANGA,R.drawable.renkarnasi, "Reincarnations"))
+    data.add(dataList(CharCategory.MANHWA,R.drawable.lookism, "Lookism", R.drawable.korean, R.drawable.star5, "10.0" ))
+    data.add(dataList(CharCategory.MANHWA,R.drawable.htf, "How To Fight", R.drawable.korean, R.drawable.star5, "10.0"))
+    data.add(dataList(CharCategory.MANHWA,R.drawable.managerkim, "Manager Kim", R.drawable.korean, R.drawable.star4, "10.0"))
+    data.add(dataList(CharCategory.MANHWA,R.drawable.sololeveling, "Solo Leveling", R.drawable.korean, R.drawable.star4, "10.0"))
+    data.add(dataList(CharCategory.MANGA,R.drawable.holy, "Holy Emperor's", R.drawable.jepang, R.drawable.star4, "9.0"))
+    data.add(dataList(CharCategory.MANGA,R.drawable.over, "Otherworldly Sword", R.drawable.jepang, R.drawable.star4, "9.0"))
+    data.add(dataList(CharCategory.MANGA,R.drawable.renkarnasi, "Reincarnations", R.drawable.jepang, R.drawable.star4, "9.0"))
+    data.add(dataList(CharCategory.MANGA,R.drawable.renkarnasi, "Reincarnations", R.drawable.jepang, R.drawable.star4, "9.0"))
+    data.add(dataList(CharCategory.MANGA,R.drawable.renkarnasi, "Reincarnations", R.drawable.jepang, R.drawable.star4, "9.0"))
+    data.add(dataList(CharCategory.MANGA,R.drawable.renkarnasi, "Reincarnations", R.drawable.jepang, R.drawable.star4, "9.0"))
+    data.add(dataList(CharCategory.MANGA,R.drawable.renkarnasi, "Reincarnations", R.drawable.jepang, R.drawable.star4, "9.0"))
+    data.add(dataList(CharCategory.MANGA,R.drawable.renkarnasi, "Reincarnations", R.drawable.jepang, R.drawable.star4, "9.0"))
     return data
 }
 
