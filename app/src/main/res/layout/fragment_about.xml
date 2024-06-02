@@ -1,28 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
     tools:context=".about.AboutFragment">
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
-        android:backgroundTint="@color/black"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MahaSiswa.MahasiswaActivity">
+        android:background="@color/white"
+        tools:context=".about.AboutFragment">
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_kelompok"
-            tools:listitem="@layout/layout_profile"
-            android:scrollbars="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="364dp"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:spanCount="2"
-            tools:ignore="MissingConstraints"/>
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-25dp"
+            tools:listitem="@layout/layout_profile" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:color="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:text="About Us"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Aplikasi ini dibuat untuk memenuhi tugas Ulangan Akhir Semester Mata Kuliah Pemrograman Mobile, dimana aplikasi yang kami buat kali ini adalah sebuah katalog list Komik dimana kami beri nama dengan NIKUKOMIK, dimana nama itu kami ambil dari nama kelompok kami ini yaitu Nanik Mugi Rahayu, Ilham Suryaputra, Muhammad Miftahul Karim, dan Umi Latifah dan kata KOMIK sendiri kami ambil karena aplikasi kami ini maerupakan katalog List Komik."
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Created By"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/wa"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/ig"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="96dp"
+            android:src="@drawable/gmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
