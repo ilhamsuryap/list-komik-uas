@@ -1,5 +1,6 @@
 package com.example.uas_listkomik.komik
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat
 
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.lifecycle.GeneratedAdapter
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uas_listkomik.R
@@ -40,8 +42,15 @@ class KomikAdapter (private var dataKomik: List<dataList>):     // 1 ( buat data
         holder.binding.tvRating.text = data.rating
     }
 
+        @SuppressLint("NotifyDataSetChanged")
+        fun setFilteredList(filterdata: List<dataList>) {
+            this.dataKomik = filterdata
+            notifyDataSetChanged()
+        }
+    }
 
-}
+
+
 
 class AdapterKelompok(
     private val dataKelompok: List<kelompok>,
@@ -86,5 +95,59 @@ class AdapterKelompok(
         holder.btnDetail.setOnClickListener {
             itemClickListener.onItemClick(mahasiswa)
         }
+    }
+}
+
+class AdapterKomik(private var generateDataList: List<dataList>) :
+    RecyclerView.Adapter<AdapterKomik.MakananViewHolder>() {
+    // variabel untuk mengambil nilai makanan
+    // dan tidak mengembalikan nilai apapun yang bisa berniali null
+    var onItemClick: ((dataList) -> Unit)? = null
+
+    // untuk mengidentifikasi data apa saja yang akan di tampilkan di recyclerView
+    class MakananViewHolder(val row: View) : RecyclerView.ViewHolder(row) {
+        val gambarkomik: ImageView = row.findViewById(R.id.gambarkomik)
+        val nama: TextView = row.findViewById(R.id.namakomik)
+        val genre: TextView = row.findViewById(R.id.genre)
+        val pembaca: TextView = row.findViewById(R.id.pembaca)
+        val detail: TextView = row.findViewById(R.id.detailkomik)
+    }
+
+    // untuk membuat ViewHolder baru yang berisi tampilan item
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MakananViewHolder {
+        val layout =
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.detail, parent, false)
+        // Mengembalikan instance dari MakananViewHolder yang berisi view yang baru dibuat
+        return MakananViewHolder(layout)
+    }
+
+    // untuk membatasi jumlah data yang akan di tampilkan
+    override fun getItemCount(): Int {
+        return generateDataList.size
+    }
+
+    //  data yang akan di tampilkan
+    override fun onBindViewHolder(holder: MakananViewHolder, position: Int) {
+        val komik = generateDataList[position]
+        holder.gambarkomik.setImageResource(komik.gambar)
+        holder.nama.text = komik.nama
+        holder.genre.text = komik.asal.toString()
+        holder.pembaca.text = komik.star.toString()
+        holder.detail.text = komik.rating
+
+        // jika item dari recyclerView di click makan
+        // akan mengeksekusi kode didalamnya
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(komik)
+        }
+    }
+
+    // untuk memperbarui data yang ditampilkan oleh adapter
+    // dengan data yang sudah di filter
+    @SuppressLint("NotifyDataSetChanged")
+    fun setFilteredList(filterdata: List<dataList>) {
+        this.generateDataList = filterdata
+        notifyDataSetChanged() // fungsi untuk render ulang tampilan recyclerView
     }
 }
