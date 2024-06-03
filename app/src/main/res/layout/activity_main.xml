@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:orientation="horizontal"
-        android:background="@color/purple"
+        android:background="@color/purple_500"
         android:paddingHorizontal="25dp"
         android:elevation="8dp"> >
 
@@ -36,7 +36,7 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="0.5"
-            android:backgroundTint="@color/purple"
+            android:backgroundTint="@color/purple_500"
             android:drawableTop="@drawable/homes"
 
             android:paddingTop="15dp"
@@ -48,7 +48,7 @@
             android:layout_weight="0.5"
             android:layout_height="60dp"
             android:paddingTop="15dp"
-            android:backgroundTint="@color/purple"
+            android:backgroundTint="@color/purple_500"
             android:drawableTop="@drawable/explore"
             app:iconSize="18dp" />
 
@@ -58,7 +58,7 @@
             android:layout_weight="0.5"
             android:layout_height="60dp"
             android:paddingTop="15dp"
-            android:backgroundTint="@color/purple"
+            android:backgroundTint="@color/purple_500"
             android:drawableTop="@drawable/info"
             app:iconSize="18dp" />
 
