@@ -25,6 +25,8 @@ class KomikAdapter (private var dataKomik: List<dataList>):     // 1 ( buat data
     // 2 membuat data class di data.kt
     class KomikViewHolder(val binding: LayoutDataKomikBinding) :RecyclerView.ViewHolder(binding.root)  // 3
 
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KomikViewHolder {        // CTRL + o = pilih 3 yaitu onCreate, getItemCount, onBind
         val binding = LayoutDataKomikBinding.inflate(LayoutInflater.from(parent.context), parent,false)  // 4
         return KomikViewHolder(binding)

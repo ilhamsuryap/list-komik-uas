@@ -20,7 +20,7 @@ fun generateDataList(): MutableList<dataList> {
     data.add(dataList(CharCategory.MANHWA,R.drawable.sololeveling, "Solo Leveling", R.drawable.korean, R.drawable.star4, "10.0"))
     data.add(dataList(CharCategory.MANHWA,R.drawable.mercenary, "Mercenary Enrollment", R.drawable.korean, R.drawable.star4, "9.10"))
     data.add(dataList(CharCategory.MANHWA,R.drawable.nanomachine, "Nano Machine", R.drawable.korean, R.drawable.star4, "8.54"))
-    data.add(dataList(CharCategory.MANHWA,R.drawable.resource_return, "Return of the Frozen Player", R.drawable.korean, R.drawable.star4, "7.98"))
+    data.add(dataList(CharCategory.MANHWA,R.drawable.resource, "Return of the Frozen Player", R.drawable.korean, R.drawable.star4, "7.98"))
     data.add(dataList(CharCategory.MANHWA,R.drawable.killerpeter, "Killer Peter", R.drawable.korean, R.drawable.star3, "7.00"))
     data.add(dataList(CharCategory.MANHWA,R.drawable.descent, "The Descent of the  Demonic Master", R.drawable.korean, R.drawable.star4, "8.26"))
     data.add(dataList(CharCategory.MANHWA,R.drawable.dungeon, "Dungeon Reset", R.drawable.korean, R.drawable.star4, "8.45"))
