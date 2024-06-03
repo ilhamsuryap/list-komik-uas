@@ -65,3 +65,16 @@ class ListKelompok {
         return mahasiswa
     }
 }
+data class dataList(val kategori: CharCategory,
+                    val gambar : Int,
+                    val nama : String,
+                    val asal : Int,
+                    val star : Int,
+                    val rating : String,
+                    val description: String)
+fun generateDataList(): MutableList<dataList> {
+    val data = mutableListOf<dataList>()
+    data.add(dataList(CharCategory.MANHWA,R.drawable.lookism, "Lookism", R.drawable.korean, R.drawable.star5, "10.0", "Deskripsi looksim" ))
+    data.add(dataList(CharCategory.MANHWA,R.drawable.htf, "How To Fight", R.drawable.korean, R.drawable.star5, "10.0", "Deskripsi how to fight"))
+    return data
+}
